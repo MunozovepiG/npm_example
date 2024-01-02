@@ -1,0 +1,13 @@
+@use './abstracts/index' as fonts;
+
+$font-size: 2.5rem;
+
+.basic{
+    font-size:  $font-size;
+    
+    @include fonts.basic_styles
+}
+
+.testColor{
+    color: fonts.$newColor;
+}

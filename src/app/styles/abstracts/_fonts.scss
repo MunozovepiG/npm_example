@@ -1,0 +1,12 @@
+$newColor: #FF0000; // This is the hex code for red
+
+@mixin basic_styles() {
+    font-size: 64;
+    color:orange;
+}
+
+:export {
+    newColor:$newColor;
+    basic_styles: basic_styles();
+    
+}
