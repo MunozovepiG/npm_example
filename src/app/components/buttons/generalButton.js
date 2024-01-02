@@ -1,29 +1,19 @@
-
 // components/CustomButton.js
 "use client";
-import { useRouter } from 'next/navigation';
 import PropTypes from 'prop-types';
 
-const CustomButton = ({ text, route, color }) => {
-  const router = useRouter();
-
-  const handleClick = () => {
-    router.push(route);
-  };
-
-  return (
-    <button
-      style={{ backgroundColor: color }}
-      onClick={handleClick}
-    >
-      {text}
-    </button>
-  );
-};
+const CustomButton = ({ text, onClick, color }) => (
+  <button
+    style={{ backgroundColor: color }}
+    onClick={onClick}
+  >
+    {text}
+  </button>
+);
 
 CustomButton.propTypes = {
   text: PropTypes.string.isRequired,
-  route: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,  // Change from 'route' to 'onClick'
   color: PropTypes.string.isRequired,
 };
 
